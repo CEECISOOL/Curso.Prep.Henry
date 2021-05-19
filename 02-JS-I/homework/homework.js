@@ -4,7 +4,7 @@
 const nuevaString = "hola";
 
 // Crea una variable numérica, puede ser cualquier número:
-const nuevoNum = 23333;
+const nuevoNum = 222;
 
 // Crea una variable booleana:
 const nuevoBool = true;
@@ -223,7 +223,7 @@ function esVocal(letra){
   } else if (letra === 'a'|| letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
     return 'Es vocal' ;
   } else {
-    return 'no es vocal'
+    return 'no es vocal';
   }
 }
 
