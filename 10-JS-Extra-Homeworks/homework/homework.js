@@ -97,13 +97,13 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
-  var nuevaCadena= '';
-  for(var i= 0; i<cadena.length; i++){
-    if(candena[i] !== 'a' && cadena[i] !== ' b' && cadena[i] !== 'c'){
-      nuevaCadena = nuevaCadena + cadena [i];
+  var filtro="";
+  for (var i=0; i<cadena.length; i++){
+    if(cadena[i]!=="a"&&cadena[i]!=="b"&&cadena[i]!=="c"){
+      filtro+=cadena[i];
     }
   }
-  return nuevaCadena;
+  return filtro;
 }
 
 
@@ -111,28 +111,30 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
-  var arrOrd = arr.slice(0,1);
+  var arrOrd = arr.slice(0,1)
   var arrOrdIzq;
   var arrOrdDer;
-  
-  for (var i= 1; i<arr.length; i++){
-    for (var j=0; j<arrOrd.length; j++ ){
-      if (arrOrd[j].length> arr[i].length){
-        arrOrdIzq = arrOrd.slice(0, j);
-        arrOrdDer = arrOrd.slice(j);
+  for(var i=1 ; i< arr.length ; i++)
+  {
+    for(var j=0 ; j<arrOrdDer.length ; j++)
+    {
+      if(arrOrd[j].length > arr[i].length)
+      {
+        arrOrdIzq= arrOrd.slice(0,j);
+        arrOrdDer= arr.Ord.slice(j);
 
         arrOrd= arrOrdIzq.concat(arr[i]).concat(arrOrdDer);
         break;
       }
-      if(j=== arrOrd.length -1){
-      arrOrd.push(arr[i]);
-    } 
+      if(j=== arrOrd.length-1){
+        arrOrd.push(arr[i]);
+        break;
+      }
+    }
   }
-}
+
   return arrOrd;
-} 
-
-
+}
 
 function buscoInterseccion(arreglo1, arreglo2){
   //Existen dos arrays, cada uno con 5 números. A partir de ello, escribir una función que permita 
@@ -140,16 +142,15 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
-  var arrInter= [];
+  var intersecciones= [];
   for(var i=0; i<arreglo1.length; i++){
     for (var j=0; j<arreglo2.length; j++){
-      if (arreglo2[j]=== arreglo[i]){
-        arrInter.push(arreglo2[j]);
-        break;
+      if (arreglo1[i]=== arreglo2[j]){
+        intersecciones.push(arreglo1[i]);
       }
     }
   }
-  return arrInter;
+  return intersecciones;
 }
 
 
